@@ -1,0 +1,26 @@
+---
+import github from "../assets/github-white.svg";
+import linkedin from "../assets/linkedin.svg";
+---
+
+<div class="social">
+  <img src={github.src} alt="github" />
+  <img src={linkedin.src} alt="github" />
+</div>
+<style>
+  .social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  img {
+    height: 2.5rem;
+    padding: 5px;
+  }
+  img:hover {
+    scale: 1.1;
+    cursor: pointer;
+  }
+</style>
