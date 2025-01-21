@@ -1,16 +1,36 @@
 ---
 import github from "../assets/github-white.svg";
 import linkedin from "../assets/linkedin.svg";
+import mail from "../assets/mail.svg";
 ---
 
 <div class="social">
-  <img src={github.src} alt="github" />
-  <img src={linkedin.src} alt="github" />
+  <a
+    href="http://github.com/damianbarzola"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={github.src} alt="github" style={{ height: "1.9rem" }} />
+  </a>
+  <a
+    href="http://linkedin.com/in/damianbarzola"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={linkedin.src} alt="linkedin" style={{ height: "2.2rem" }} />
+  </a>
+  <a
+    href="mailto:damianebarzola@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={mail.src} alt="github" />
+  </a>
 </div>
 <style>
   .social {
     display: flex;
-    gap: 10px;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -18,9 +38,10 @@ import linkedin from "../assets/linkedin.svg";
   img {
     height: 2.5rem;
     padding: 5px;
+    transition: 0.3s ease all;
   }
   img:hover {
-    scale: 1.1;
+    scale: 1.15;
     cursor: pointer;
   }
 </style>
