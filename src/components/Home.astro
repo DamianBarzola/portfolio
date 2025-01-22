@@ -1,5 +1,8 @@
 ---
-import astroLogo from "../assets/astro.svg";
+import AboutSection from "./AboutSection.astro";
+import ExperienceSection from "./ExperienceSection.astro";
+import EducationSection from "./EducationSection.astro";
+import Menu from "./Menu.astro";
 import Socials from "./Socials.astro";
 ---
 
@@ -8,60 +11,71 @@ import Socials from "./Socials.astro";
     <div class="contact-info">
       <h1>Damian Barzola</h1>
       <h3>Ingeniero en sistemas de información</h3>
-      <p>damianebarzola@gmail.com</p>
-      <p>+543465449961</p>
-      <p>Rosario, Argentina</p>
+      <!-- <p>damianebarzola@gmail.com</p> -->
+      <!-- <p>+543465449961</p> -->
+      <!-- <p>Rosario, Argentina</p> -->
       <Socials />
     </div>
+    <Menu />
   </section>
-  <section></section>
+  <section class="info">
+    <AboutSection />
+    <ExperienceSection />
+    <EducationSection < section />
+
+    <style>
+      #container {
+        font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+          "Nimbus Sans", Arial, sans-serif;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgb(0 0 0) 0%,
+          rgb(6 6 6) 35%,
+          #121212 100%
+        );
+        color: white;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 4rem 3rem;
+      }
+
+      section {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: 0.25rem;
+        margin-bottom: 1rem;
+        margin: 0;
+      }
+      h3 {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+      }
+      .info {
+        overflow: auto;
+      }
+
+      @media screen and (max-width: 768px) {
+        main {
+          flex-direction: column;
+          padding: 2rem 0.5rem;
+        }
+      }
+      @media screen and (max-height: 368px) {
+        main {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </section>
 </main>
-
-<style>
-  #container {
-    font-family: Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
-      sans-serif;
-    height: 100%;
-    background: linear-gradient(
-      180deg,
-      rgb(0 0 0) 0%,
-      rgb(6 6 6) 35%,
-      #121212 100%
-    );
-    color: white;
-  }
-
-  main {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 4rem;
-  }
-
-  section {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.25rem;
-    margin: 1rem 0;
-  }
-  h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  @media screen and (max-width: 768px) {
-    main {
-      flex-direction: column;
-    }
-  }
-  @media screen and (max-height: 368px) {
-    main {
-      flex-direction: column;
-    }
-  }
-</style>

@@ -6,31 +6,33 @@ import mail from "../assets/mail.svg";
 
 <div class="social">
   <a
-    href="http://github.com/damianbarzola"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={github.src} alt="github" style={{ height: "1.9rem" }} />
-  </a>
-  <a
     href="http://linkedin.com/in/damianbarzola"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img src={linkedin.src} alt="linkedin" style={{ height: "2.2rem" }} />
   </a>
+  <div class="separator"></div>
+  <a
+    href="http://github.com/damianbarzola"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={github.src} alt="github" style={{ height: "2rem" }} />
+  </a>
+  <div class="separator"></div>
   <a
     href="mailto:damianebarzola@gmail.com"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src={mail.src} alt="github" />
+    <img src={mail.src} alt="mail" />
   </a>
 </div>
 <style>
   .social {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -43,5 +45,10 @@ import mail from "../assets/mail.svg";
   img:hover {
     scale: 1.15;
     cursor: pointer;
+  }
+  .separator {
+    width: 2px;
+    height: 1.7rem;
+    background-color: rgb(63, 63, 63);
   }
 </style>
