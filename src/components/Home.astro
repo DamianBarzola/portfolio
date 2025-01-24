@@ -20,62 +20,71 @@ import Socials from "./Socials.astro";
   </section>
   <section class="info">
     <AboutSection />
+    <hr />
     <ExperienceSection />
-    <EducationSection < section />
-
-    <style>
-      #container {
-        font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
-          "Nimbus Sans", Arial, sans-serif;
-        height: 100%;
-        background: linear-gradient(
-          180deg,
-          rgb(0 0 0) 0%,
-          rgb(6 6 6) 35%,
-          #121212 100%
-        );
-        color: white;
-      }
-      main {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        padding: 4rem 3rem;
-      }
-
-      section {
-        display: flex;
-        align-items: start;
-        flex-direction: column;
-        width: 100%;
-        padding: 0 1rem;
-      }
-
-      h1 {
-        font-size: 3rem;
-        letter-spacing: 0.25rem;
-        margin-bottom: 1rem;
-        margin: 0;
-      }
-      h3 {
-        font-size: 1.3rem;
-        margin: 1rem 0;
-      }
-      .info {
-        overflow: auto;
-      }
-
-      @media screen and (max-width: 768px) {
-        main {
-          flex-direction: column;
-          padding: 2rem 0.5rem;
-        }
-      }
-      @media screen and (max-height: 368px) {
-        main {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <hr />
+    <EducationSection />
   </section>
 </main>
+<style>
+  #container {
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+      Arial, sans-serif;
+    background: linear-gradient(
+      180deg,
+      rgb(0 0 0) 0%,
+      rgb(6 6 6) 35%,
+      #121212 100%
+    );
+    color: white;
+    height: 78dvh;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 4rem 3rem;
+  }
+
+  section {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  hr {
+    width: 99%;
+    margin: 2rem 0;
+    border: #161616 1px solid;
+  }
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    margin: 0;
+    font-weight: 800;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+  }
+  .info {
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    #container {
+      height: 100%;
+    }
+    main {
+      flex-direction: column;
+      padding: 2rem 0.5rem;
+    }
+  }
+  @media screen and (max-height: 368px) {
+    main {
+      flex-direction: column;
+    }
+  }
+</style>
