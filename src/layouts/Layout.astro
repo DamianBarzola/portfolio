@@ -1,10 +1,18 @@
+---
+const params = Astro.params;
+
+const currentLang = params.lang || "es";
+---
+
 <!doctype html>
-<html lang="es">
+<html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="alternate" hreflang="en" href="/en" />
+    <link rel="alternate" hreflang="es" href="/es" />
     <title>Portfolio</title>
   </head>
   <body>
