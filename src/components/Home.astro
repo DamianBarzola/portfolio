@@ -4,28 +4,55 @@ import ExperienceSection from "./ExperienceSection.astro";
 import EducationSection from "./EducationSection.astro";
 import Menu from "./Menu.astro";
 import Socials from "./Socials.astro";
+import Language from "./Language.astro";
+
+const { translations } = Astro.props;
 ---
 
 <main id="container">
   <section>
     <div class="contact-info">
       <h1>Damian Barzola</h1>
-      <h3>Ingeniero en sistemas de información</h3>
-      <!-- <p>damianebarzola@gmail.com</p> -->
-      <!-- <p>+543465449961</p> -->
-      <!-- <p>Rosario, Argentina</p> -->
+      <h3>{translations?.profession}</h3>
       <Socials />
     </div>
     <Menu />
+    <Language />
   </section>
   <section class="info">
     <AboutSection />
-    <hr />
     <ExperienceSection />
-    <hr />
     <EducationSection />
   </section>
 </main>
+<script is:inline>
+  let sections = document.querySelectorAll("section[id]");
+  let navLinks = document.querySelectorAll("ul li a");
+  let sectionsContainer = document.querySelector("section.info");
+
+  console.log("Secciones encontradas:", sections.length);
+  sectionsContainer.onscroll = () => {
+    sections.forEach((sec) => {
+      let top = sectionsContainer.scrollTop;
+      let offset = sec.offsetTop - 250; // Ajuste para detectar antes
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+      console.log("Top:", top, "Offset:", offset, "Height:", height, "ID:", id);
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        let activeLink = document.querySelector(`ul li a[href*="${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    });
+  };
+</script>
+
 <style>
   #container {
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
@@ -38,6 +65,7 @@ import Socials from "./Socials.astro";
     );
     color: white;
     height: 78dvh;
+    animation: fadeIn 0.5s ease-in-out;
   }
   main {
     display: flex;
@@ -47,7 +75,6 @@ import Socials from "./Socials.astro";
   }
 
   section {
-    display: flex;
     align-items: start;
     flex-direction: column;
     width: 100%;
@@ -71,6 +98,7 @@ import Socials from "./Socials.astro";
   }
   .info {
     overflow: auto;
+    scrollbar-gutter: stable;
   }
 
   @media screen and (max-width: 768px) {

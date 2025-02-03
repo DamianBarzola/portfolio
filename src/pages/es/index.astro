@@ -1,8 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Home from "../../components/Home.astro";
+import { loadTranslations } from "../../i18n/i18n.js";
+
+const translations = await loadTranslations("es");
 ---
 
 <Layout lang="es">
-  <Home />
+  <Home translations={translations} />
 </Layout>

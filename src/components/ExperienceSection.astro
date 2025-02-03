@@ -4,12 +4,14 @@
 
 <section id="projects">
   <div class="experience">
-    <div class="date">
-      <p>Ene. 2022 - Actualmente</p>
-      <p>Rosario, Argentina</p>
-    </div>
-    <div class="info">
-      <p class="title">Desarrollador de software - Ingeniería Boggio</p>
+    <div class="line"></div>
+    <div class="data">
+      <div class="header">
+        <p class="title">
+          Desarrollador de software - Ingeniería Boggio / Trini Talkbot
+        </p>
+        <p class="date">Ene. 2022 - Actualmente</p>
+      </div>
       <div class="description">
         <p>
           <u>Migración de arquitectura:</u> Transición de una aplicación monolítica
@@ -39,13 +41,42 @@
   </div>
 </section>
 <style>
+  .data {
+    width: 92%;
+  }
+  .line {
+    position: relative;
+    width: 8%;
+    margin-bottom: 0.5rem;
+  }
+  .line::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-secondary);
+  }
+  .line::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 10px);
+    background-color: var(--text-secondary);
+    border-radius: 1px;
+  }
   .experience {
     display: flex;
     width: 100%;
   }
   .date {
-    width: 25%;
-    color: rgb(207, 207, 207);
+    color: var(--text-primary);
     font-size: 1rem;
   }
   .info {
@@ -56,9 +87,13 @@
   .title {
     font-weight: bold;
     font-size: 18px;
+    margin-bottom: 0.2rem;
+  }
+  .header {
+    margin-bottom: 1rem;
   }
   .description {
-    color: rgb(207, 207, 207);
+    color: var(--text-secondary);
   }
   p {
     margin-top: 0;

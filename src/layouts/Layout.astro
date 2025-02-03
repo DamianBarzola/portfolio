@@ -21,6 +21,11 @@ const currentLang = params.lang || "es";
 </html>
 
 <style is:global>
+  :root {
+    --text-primary: white;
+    --text-secondary: #cecece;
+    --text-tertiary: #b1b1b1;
+  }
   html,
   body {
     margin: 0;
@@ -33,11 +38,21 @@ const currentLang = params.lang || "es";
     );
     height: 100%;
   }
-  /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-  /** {
-  scrollbar-width: thin;
-  scrollbar-color: #BCBCBC #1A1A1A;
-}*/
+
+  section[id] {
+    min-height: 73dvh;
+    margin-top: 5dvh;
+    padding-bottom: 5dvh;
+    border-bottom: 1px solid #161616;
+  }
+  section[id]:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  section[id]:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
   /* Chrome, Edge and Safari */
   *::-webkit-scrollbar {
@@ -68,5 +83,14 @@ const currentLang = params.lang || "es";
 
   *::-webkit-scrollbar-thumb:active {
     background-color: #ffffff;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 </style>

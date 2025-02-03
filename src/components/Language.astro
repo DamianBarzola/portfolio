@@ -1,0 +1,30 @@
+---
+const currentLang = new URL(Astro.url).pathname.split("/")[1];
+---
+
+<div class="language-container">
+  <a href="/es" class={currentLang === "es" ? "active" : ""}>Es</a>
+  <a href="/en" class={currentLang === "en" ? "active" : ""}>En</a>
+</div>
+<style>
+  .language-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+  .language-container a {
+    padding: 0.6rem 0.7rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+  }
+  .language-container .active {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+  }
+</style>
