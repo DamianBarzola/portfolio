@@ -9,22 +9,27 @@ const currentLang = new URL(Astro.url).pathname.split("/")[1];
 <style>
   .language-container {
     display: flex;
-    justify-content: space-between;
-    width: 100px;
+    gap: 1dvw;
   }
   .language-container a {
-    padding: 0.6rem 0.7rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 1rem;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
-    color: white;
+    color: var(--text-secondary);
     text-decoration: none;
+    transition: 0.3s ease all;
   }
   .language-container .active {
     cursor: pointer;
-    background-color: white;
+    background-color: var(--text-primary);
+    color: rgb(39, 39, 39);
+  }
+  .language-container a:hover {
+    color: var(--text-primary);
+  }
+  .language-container .active:hover {
     color: black;
-    font-size: 1.2rem;
   }
 </style>

@@ -4,7 +4,6 @@ import ExperienceSection from "./ExperienceSection.astro";
 import EducationSection from "./EducationSection.astro";
 import Menu from "./Menu.astro";
 import Socials from "./Socials.astro";
-import Language from "./Language.astro";
 
 const { translations } = Astro.props;
 ---
@@ -17,7 +16,6 @@ const { translations } = Astro.props;
       <Socials />
     </div>
     <Menu />
-    <Language />
   </section>
   <section class="info">
     <AboutSection />
@@ -55,35 +53,25 @@ const { translations } = Astro.props;
 
 <style>
   #container {
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-      Arial, sans-serif;
-    background: linear-gradient(
-      180deg,
-      rgb(0 0 0) 0%,
-      rgb(6 6 6) 35%,
-      #121212 100%
-    );
-    color: white;
     height: 78dvh;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
   }
   main {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 4rem 3rem;
+    padding: 4rem 3rem 0 3rem;
   }
 
   section {
     align-items: start;
     flex-direction: column;
     width: 100%;
-    padding: 0 1rem;
   }
   hr {
     width: 99%;
     margin: 2rem 0;
-    border: #161616 1px solid;
+    border: var(--line) 1px solid;
   }
   h1 {
     font-size: 3rem;
@@ -95,6 +83,7 @@ const { translations } = Astro.props;
   h3 {
     font-size: 1.3rem;
     margin: 1rem 0;
+    color: var(--text-secondary);
   }
   .info {
     overflow: auto;
@@ -107,7 +96,7 @@ const { translations } = Astro.props;
     }
     main {
       flex-direction: column;
-      padding: 2rem 0.5rem;
+      padding: 2rem 1rem;
     }
   }
   @media screen and (max-height: 368px) {

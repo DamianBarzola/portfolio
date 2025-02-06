@@ -1,0 +1,29 @@
+---
+import Language from "./Language.astro";
+
+const year = new Date().getFullYear();
+const { copy } = Astro.props;
+---
+
+<footer>
+  <div>
+    <Language />
+  </div>
+  <div><span>© {year} Damian Barzola. {copy}.</span></div>
+</footer>
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem 0.5rem 4rem;
+    align-items: center;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  @media screen and (max-width: 768px) {
+    footer {
+      padding: 2rem 0.5rem;
+    }
+  }
+</style>
