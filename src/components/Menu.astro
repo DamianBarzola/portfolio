@@ -14,37 +14,43 @@
       <a href="#education">Formación</a>
     </li>
   </ul>
-
-  <style>
-    ul {
-      list-style: none;
-      font-size: 1.4rem;
-      margin: 2.5rem 0;
-      padding: 0;
-    }
-    li {
-      margin: 1.5rem 0;
-      cursor: pointer;
-      transition: 0.3s ease-in-out all;
-    }
-    a {
-      color: var(--text-secondary);
-      text-decoration: none;
-    }
-    .active {
-      color: var(--text-primary);
-      font-weight: 700;
-      font-size: 1.7rem;
-      position: relative;
-      padding: 0 20px;
-    }
-    .active::before {
-      content: "";
-      position: absolute;
-      width: 7px;
-      height: 100%;
-      background-color: var(--text-primary);
-      left: 0px;
-    }
-  </style>
 </div>
+
+<style>
+  ul {
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 2.5rem 0;
+    padding: 0;
+  }
+  li {
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+  }
+  a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .active {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.7rem;
+    position: relative;
+    padding: 0 20px;
+  }
+  .active::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    background-color: var(--text-primary);
+    left: 0px;
+  }
+
+  @media screen and (max-width: 768px) {
+    div {
+      display: none;
+    }
+  }
+</style>
