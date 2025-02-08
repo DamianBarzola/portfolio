@@ -1,4 +1,10 @@
 {
         "profession": "Information systems engineer",
-        "copyright":"All rights reserved"
+        "copyright":"All rights reserved",
+        "menu":{
+                "profile":"Professional Profile",
+                "experience":"Work Experience",
+                "education":"Education",
+                "projects":"Projects"
+        }
 }

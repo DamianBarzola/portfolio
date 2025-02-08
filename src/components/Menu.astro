@@ -1,17 +1,17 @@
 ---
-
+const { translations } = Astro.props;
 ---
 
 <div>
   <ul>
     <li>
-      <a class="active" href="#about">Perfil Profesional</a>
+      <a class="active" href="#about">{translations?.profile}</a>
     </li>
     <li>
-      <a href="#projects">Experiencia Laboral</a>
+      <a href="#experience">{translations?.experience}</a>
     </li>
     <li>
-      <a href="#education">Formación</a>
+      <a href="#education">{translations?.education}</a>
     </li>
   </ul>
 </div>

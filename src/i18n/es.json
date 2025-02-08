@@ -1,4 +1,11 @@
 {
         "profession": "Ingeniero en sistemas de información",
-        "copyright":"Todos los derechos reservados"
+        "copyright":"Todos los derechos reservados",
+        "menu":{
+                "profile":"Perfil Profesional", 
+                "experience":"Experiencia Laboral",
+                "education":"Formación",
+                "projects":"Proyectos"
+        }
+        
 }

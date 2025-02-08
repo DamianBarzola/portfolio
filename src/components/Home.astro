@@ -15,12 +15,12 @@ const { translations } = Astro.props;
       <h3>{translations?.profession}</h3>
       <Socials />
     </div>
-    <Menu />
+    <Menu translations={translations?.menu} />
   </section>
   <section class="info">
-    <AboutSection />
-    <ExperienceSection />
-    <EducationSection />
+    <AboutSection translations={translations} />
+    <ExperienceSection translations={translations} />
+    <EducationSection translations={translations} />
   </section>
 </main>
 <script is:inline>
