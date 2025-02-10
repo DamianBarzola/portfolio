@@ -4,21 +4,28 @@ const { translations } = Astro.props;
 
 <section id="education">
   <span class="section-title">{translations?.menu.education}</span>
-  <div class="experience">
-    <div class="date">
-      <p>2017 - 2023</p>
-      <p>Rosario, Argentina</p>
-    </div>
-    <div class="info">
-      <p class="title">Ingeniería en Sistemas de Información</p>
-      <div class="description">
-        <p>Universidad Tecnológica Nacional</p>
-      </div>
-    </div>
-  </div>
+  {
+    translations.education &&
+      translations.education.map(
+        ({ institution, degree, period, location }) => (
+          <div class="education">
+            <div class="date">
+              <p>{period}</p>
+              <p>{location}</p>
+            </div>
+            <div class="info">
+              <p class="title">{degree}</p>
+              <div class="description">
+                <p>{institution}</p>
+              </div>
+            </div>
+          </div>
+        )
+      )
+  }
 </section>
 <style>
-  .experience {
+  .education {
     display: flex;
     width: 100%;
   }

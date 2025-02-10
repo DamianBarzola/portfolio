@@ -58,43 +58,28 @@ const chips = [
 
 <section id="experience">
   <span class="section-title">{translations?.menu.experience}</span>
-  <div class="experience">
-    <div class="line"></div>
-    <div class="data">
-      <div class="header">
-        <p class="title">
-          Desarrollador de software - Ingeniería Boggio / Trini Talkbot
-        </p>
-        <p class="date">Ene. 2022 - Actualmente</p>
-      </div>
-      <div class="description">
-        <p>
-          <u>Migración de arquitectura:</u> Transición de una aplicación monolítica
-          en Python Flask hacia una arquitectura moderna basada en un backend API
-          desarrollado con Flask y un frontend PWA desarrollado con React.js. Mejorando
-          la escalabilidad, robustez y mantenibilidad del proyecto.
-        </p>
-        <p>
-          <u>Desarrollo continuo y mantenimiento:</u> Desarrollo y mantenimiento
-          continuo de nuevas funcionalidades del proyecto Trini Talkbot, especializado
-          en la creación y gestión de chatbots. Incluye, entre otras, el sistema
-          de chat en tiempo real, la creación de un tablero de analíticas interactivo
-          para la visualización de datos clave, la sección de conectores para integrarse
-          con diversos servicios, y la sección de campañas para enviar múltiples
-          mensajes a distintos contactos.
-        </p>
-        <p>
-          <u>Implementación de pruebas automatizadas:</u> Creación de un sistema
-          de pruebas automatizadas, mejorando la calidad del código.
-        </p>
-        <p>
-          <u>Diseño y UI/UX:</u> Diseño y maquetación de la interfaz de usuario,
-          mejorando la usabilidad y la estética general de la aplicación.
-        </p>
-      </div>
-      <Chips data={chips} />
-    </div>
-  </div>
+  {
+    translations.experience &&
+      translations.experience.map(
+        ({ position, period, company, description }) => {
+          return (
+            <div class="experience">
+              <div class="line" />
+              <div class="data">
+                <div class="header">
+                  <p class="title">
+                    {position} - {company}
+                  </p>
+                  <p class="date">{period}</p>
+                </div>
+                <div class="description" set:html={description} />
+                <Chips data={chips} />
+              </div>
+            </div>
+          );
+        }
+      )
+  }
 </section>
 <style>
   .data {
