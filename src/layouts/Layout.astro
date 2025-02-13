@@ -22,27 +22,30 @@ const currentLang = params.lang || "es";
 
 <style is:global>
   :root {
+    --black: #000000;
+    --blue: #14213d;
+    --gold: #ffb300;
+    --platinum: #e5e5e5;
+    --white: #ffffff;
+
     --text-primary: white;
-    --text-secondary: #cecece;
+    --text-secondary: var(--platinum);
     --text-tertiary: #b1b1b1;
 
-    --line: rgb(24, 24, 24);
-  }
-  html {
-    background: linear-gradient(
+    --card: rgb(28 28 28 / 49%);
+
+    --bg-gradient: linear-gradient(
       180deg,
       rgb(2 7 26) 0%,
       rgb(1 6 19) 35%,
       #01010f 100%
     );
-    min-height: 100dvh;
 
-    /* background: linear-gradient(
-      180deg,
-      rgb(0 0 0) 0%,
-      rgb(6 6 6) 35%,
-      #121212 100%
-    ); */
+    --line: rgb(24, 24, 24);
+  }
+  html {
+    min-height: 100dvh;
+    background: var(--bg-gradient);
   }
   html,
   body {
