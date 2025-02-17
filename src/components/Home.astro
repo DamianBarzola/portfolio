@@ -4,6 +4,7 @@ import ExperienceSection from "./ExperienceSection.astro";
 import EducationSection from "./EducationSection.astro";
 import Menu from "./Menu.astro";
 import Socials from "./Socials.astro";
+import ProjectsSection from "./ProjectsSection.astro";
 
 const { translations } = Astro.props;
 ---
@@ -21,6 +22,7 @@ const { translations } = Astro.props;
     <AboutSection translations={translations} />
     <ExperienceSection translations={translations} />
     <EducationSection translations={translations} />
+    <ProjectsSection translations={translations} />
   </section>
 </main>
 <script is:inline>
@@ -99,6 +101,7 @@ const { translations } = Astro.props;
       padding: 2rem 1rem;
     }
     .contact-info {
+      text-align: center;
       min-height: 100dvh;
       justify-content: center;
       display: flex;

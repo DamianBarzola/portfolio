@@ -1,58 +1,19 @@
 ---
+import { CHIPS_TAGS } from "../consts.js";
 import Chips from "./Chips.astro";
-import js from "../assets/dev/js.svg";
-import react from "../assets/dev/react.svg";
-import bootstrap from "../assets/dev/bootstrap.svg";
-import css from "../assets/dev/css.svg";
-import html from "../assets/dev/html.svg";
-import vitest from "../assets/dev/vitest.svg";
-import cypress from "../assets/dev/cypress.svg";
-import python from "../assets/dev/python.svg";
-import flask from "../assets/dev/flask.svg";
-import postgre from "../assets/dev/postgre.svg";
 
 const { translations } = Astro.props;
 const chips = [
-  {
-    image: react.src,
-    name: "React.js",
-  },
-  {
-    image: js.src,
-    name: "JavaScript",
-  },
-  {
-    image: html.src,
-    name: "HTML",
-  },
-  {
-    image: css.src,
-    name: "CSS",
-  },
-  {
-    image: bootstrap.src,
-    name: "Bootstrap",
-  },
-  {
-    image: vitest.src,
-    name: "Vitest",
-  },
-  {
-    image: cypress.src,
-    name: "Cypress",
-  },
-  {
-    image: python.src,
-    name: "Python",
-  },
-  {
-    image: flask.src,
-    name: "Flask",
-  },
-  {
-    image: postgre.src,
-    name: "PostgreSQL",
-  },
+  CHIPS_TAGS.REACT,
+  CHIPS_TAGS.JAVASCRIPT,
+  CHIPS_TAGS.HTML,
+  CHIPS_TAGS.CSS,
+  CHIPS_TAGS.BOOTSTRAP,
+  CHIPS_TAGS.VITEST,
+  CHIPS_TAGS.CYPRESS,
+  CHIPS_TAGS.PYTHON,
+  CHIPS_TAGS.FLASK,
+  CHIPS_TAGS.POSTGRE,
 ];
 ---
 

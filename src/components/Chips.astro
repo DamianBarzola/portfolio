@@ -1,13 +1,132 @@
 ---
+import { CHIPS_TAGS } from "../consts.js";
+import js from "../assets/dev/js.svg";
+import react from "../assets/dev/react.svg";
+import bootstrap from "../assets/dev/bootstrap.svg";
+import css from "../assets/dev/css.svg";
+import html from "../assets/dev/html.svg";
+import vitest from "../assets/dev/vitest.svg";
+import cypress from "../assets/dev/cypress.svg";
+import python from "../assets/dev/python.svg";
+import flask from "../assets/dev/flask.svg";
+import postgre from "../assets/dev/postgre.svg";
+import node from "../assets/dev/node.svg";
+import astro from "../assets/dev/astro.svg";
+import c from "../assets/dev/c.svg";
+import java from "../assets/dev/java.svg";
+import jwt from "../assets/dev/jwt.svg";
+import mariadb from "../assets/dev/mariadb.svg";
+import mui from "../assets/dev/mui.svg";
+import mysql from "../assets/dev/mysql.svg";
+import next from "../assets/dev/next.svg";
+import reactRouter from "../assets/dev/react-router.svg";
+import spring from "../assets/dev/spring.svg";
+import typescript from "../assets/dev/typescript.svg";
+import tailwind from "../assets/dev/tailwind.svg";
+
 const { data } = Astro.props;
+const chipData = {
+  [CHIPS_TAGS.JAVASCRIPT]: {
+    image: js.src,
+    name: "JavaScript",
+  },
+  [CHIPS_TAGS.REACT]: {
+    image: react.src,
+    name: "React.js",
+  },
+  [CHIPS_TAGS.HTML]: {
+    image: html.src,
+    name: "HTML",
+  },
+  [CHIPS_TAGS.CSS]: {
+    image: css.src,
+    name: "CSS",
+  },
+  [CHIPS_TAGS.BOOTSTRAP]: {
+    image: bootstrap.src,
+    name: "Bootstrap",
+  },
+  [CHIPS_TAGS.VITEST]: {
+    image: vitest.src,
+    name: "Vitest",
+  },
+  [CHIPS_TAGS.CYPRESS]: {
+    image: cypress.src,
+    name: "Cypress",
+  },
+  [CHIPS_TAGS.PYTHON]: {
+    image: python.src,
+    name: "Python",
+  },
+  [CHIPS_TAGS.FLASK]: {
+    image: flask.src,
+    name: "Flask",
+  },
+  [CHIPS_TAGS.POSTGRE]: {
+    image: postgre.src,
+    name: "PostgreSQL",
+  },
+  [CHIPS_TAGS.NODE]: {
+    image: node.src,
+    name: "Node.js",
+  },
+  [CHIPS_TAGS.ASTRO]: {
+    image: astro.src,
+    name: "Astro",
+  },
+  [CHIPS_TAGS.C]: {
+    image: c.src,
+    name: "C",
+  },
+  [CHIPS_TAGS.JAVA]: {
+    image: java.src,
+    name: "Java",
+  },
+  [CHIPS_TAGS.JWT]: {
+    image: jwt.src,
+    name: "JWT",
+  },
+  [CHIPS_TAGS.MARIADB]: {
+    image: mariadb.src,
+    name: "MariaDB",
+  },
+  [CHIPS_TAGS.MUI]: {
+    image: mui.src,
+    name: "MUI",
+  },
+  [CHIPS_TAGS.MYSQL]: {
+    image: mysql.src,
+    name: "MySQL",
+  },
+  [CHIPS_TAGS.NEXT]: {
+    image: next.src,
+    name: "Next.js",
+  },
+  [CHIPS_TAGS.REACT_ROUTER]: {
+    image: reactRouter.src,
+    name: "React Router",
+  },
+  [CHIPS_TAGS.SPRING]: {
+    image: spring.src,
+    name: "Spring",
+  },
+  [CHIPS_TAGS.TYPESCRIPT]: {
+    image: typescript.src,
+    name: "TypeScript",
+  },
+  [CHIPS_TAGS.TAILWIND]: {
+    image: tailwind.src,
+    name: "Tailwind CSS",
+  },
+};
 ---
 
 <div class="chips">
   {
-    data.map((chip: { image: string; name: string }) => (
+    data.map((chip) => (
       <div class="chip">
-        <img src={chip.image} alt={chip.name} />
-        <span>{chip.name}</span>
+        <img src={chipData[chip]?.image} alt={chipData[chip]?.name} />
+        <span>{chipData[chip]?.name}</span>
       </div>
     ))
   }
@@ -26,7 +145,7 @@ const { data } = Astro.props;
     gap: 0.4rem;
     align-items: center;
     background-color: rgba(240, 240, 240, 0.1);
-    padding: 0.4rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 0.4rem;
     border: 1px solid black;
     color: var(--text-tertiary);
