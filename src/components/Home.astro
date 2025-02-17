@@ -12,9 +12,9 @@ const { translations } = Astro.props;
 <main id="container">
   <section>
     <div class="contact-info">
-      <h1>Damian Barzola</h1>
+      <h1>{translations?.name}</h1>
       <h3>{translations?.profession}</h3>
-      <Socials />
+      <Socials translations={translations?.social} />
     </div>
     <Menu translations={translations?.menu} />
   </section>
@@ -34,7 +34,7 @@ const { translations } = Astro.props;
   sectionsContainer.onscroll = () => {
     sections.forEach((sec) => {
       let top = sectionsContainer.scrollTop;
-      let offset = sec.offsetTop - 250; // Ajuste para detectar antes
+      let offset = sec.offsetTop - 250;
       let height = sec.offsetHeight;
       let id = sec.getAttribute("id");
       console.log("Top:", top, "Offset:", offset, "Height:", height, "ID:", id);

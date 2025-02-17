@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Home from "../components/Home.astro";
+import { loadTranslations } from "../i18n/i18n.js";
+import Footer from "../components/Footer.astro";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+
+const allowedLanguages = ["es", "en"];
+const { lang } = Astro.params;
+console.log(lang);
+if (!lang || !allowedLanguages.includes(lang)) {
+  return Astro.redirect("/es");
+}
+const translations = await loadTranslations(lang);
+---
+
+<Layout lang={lang}>
+  <Home translations={translations} />
+  <Footer copy={translations.copyright} />
+</Layout>

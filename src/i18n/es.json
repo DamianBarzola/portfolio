@@ -1,4 +1,10 @@
 {
+  "name": "Damian Barzola",
+  "social":{
+    "linkedin": "https://www.linkedin.com/in/damianbarzola/",
+    "github": "https://github.com/damianbarzola",
+    "email": "mailto:damianebarzola@example.com"
+  },
   "profession": "Ingeniero en sistemas de información",
   "copyright": "Todos los derechos reservados",
   "menu": {

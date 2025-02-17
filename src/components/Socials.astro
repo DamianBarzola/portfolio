@@ -2,27 +2,21 @@
 import github from "../assets/github-white.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.svg";
+
+const { translations } = Astro.props;
 ---
 
 <div class="social">
-  <a
-    href="http://linkedin.com/in/damianbarzola"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href={translations?.linkedin} target="_blank" rel="noopener noreferrer">
     <img src={linkedin.src} alt="linkedin" style={{ height: "1.7rem" }} />
   </a>
   <div class="separator"></div>
-  <a
-    href="http://github.com/damianbarzola"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href={translations?.github} target="_blank" rel="noopener noreferrer">
     <img src={github.src} alt="github" style={{ height: "1.6rem" }} />
   </a>
   <div class="separator"></div>
   <a
-    href="mailto:damianebarzola@gmail.com"
+    href={"mailto:" + translations?.mail}
     target="_blank"
     rel="noopener noreferrer"
   >

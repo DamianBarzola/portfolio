@@ -1,5 +1,13 @@
 {
+  "name": "Damian Barzola",
+  
+
   "profession": "Information systems engineer",
+  "social":{
+    "linkedin": "https://www.linkedin.com/in/damianbarzola/",
+    "github": "https://github.com/damianbarzola",
+    "email": "mailto:damianebarzola@example.com"
+  },
   "copyright": "All rights reserved",
   "menu": {
     "profile": "Professional Profile",
