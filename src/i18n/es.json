@@ -29,5 +29,15 @@
       "period": "2017 - 2023",
       "location": "Rosario, Argentina"
     }
+  ],
+  "projects":[
+    {
+      "name": "Trini Talkbot",
+      "description": "Aplicación web para crear chatbots de WhatsApp y Telegram",
+      "technologies": ["next", "mui", "javascript", "tailwind"],
+      "web": "https://trinitalkbot.com",
+      "image": "https://trinitalkbot.com/static/media/logo.3b3b3b3b.svg",
+      "repo": "https://github.com/damianbarzola/trini-talkbot"
+    }
   ]
 }
