@@ -1,6 +1,6 @@
 {
   "name": "Damian Barzola",
-  "social":{
+  "social": {
     "linkedin": "https://www.linkedin.com/in/damianbarzola/",
     "github": "https://github.com/damianbarzola",
     "email": "mailto:damianebarzola@example.com"
@@ -30,14 +30,34 @@
       "location": "Rosario, Argentina"
     }
   ],
-  "projects":[
+  "projects": [
     {
-      "name": "Trini Talkbot",
-      "description": "Aplicación web para crear chatbots de WhatsApp y Telegram",
+      "name": "Costos App",
+      "description": "Aplicación web para la gestión de costos de producción de una empresa. Permite llevar un registro de los costos de los productos, calcular el costo de producción y obtener informes detallados de los costos de la empresa.",
       "technologies": ["next", "mui", "javascript", "tailwind"],
-      "web": "https://trinitalkbot.com",
-      "image": "https://trinitalkbot.com/static/media/logo.3b3b3b3b.svg",
+      "web": "https://costos-app.vercel.app/",
+      "imageKey": "costosApp",
       "repo": "https://github.com/damianbarzola/trini-talkbot"
+    },
+    {
+      "name":"Cine App",
+      "description":"Aplicación web para la gestión de una cartelera de cine. Permite visualizar las películas en cartel, ver los detalles de cada película y realizar reservas de entradas.",
+      "technologies":["react", "javascript","redux", "bootstrap", "java", "spring","mysql"],
+      "web":"https://cine-app.vercel.app/",
+      "imageKey":"cineApp",
+      "repo":""
+    },
+    {
+      "name":"Fletes App",
+      "description":"Aplicación web para la gestión de fletes de una empresa de transporte. Permite llevar un registro de los fletes realizados, calcular el costo de los fletes y obtener informes detallados de los fletes de la empresa.",
+      "technologies":["react", "javascript","redux", "express", "typescript", "spring","mysql"],
+      "web":"https://fletes-app.vercel.app/",
+      "imageKey":"fletesApp",
+      "repo":""
     }
-  ]
+  ],
+  "buttons": {
+    "web": "Sitio web",
+    "code": "Código"
+  }
 }

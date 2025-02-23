@@ -21,4 +21,5 @@ export const CHIPS_TAGS = {
   SPRING: "spring",
   TYPESCRIPT: "typescript",
   TAILWIND: "tailwind",
+  REDUX: "redux",
 };

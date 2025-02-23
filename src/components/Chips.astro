@@ -23,6 +23,7 @@ import reactRouter from "../assets/dev/react-router.svg";
 import spring from "../assets/dev/spring.svg";
 import typescript from "../assets/dev/typescript.svg";
 import tailwind from "../assets/dev/tailwind.svg";
+import redux from "../assets/dev/redux.svg";
 
 const { data } = Astro.props;
 const chipData = {
@@ -32,7 +33,7 @@ const chipData = {
   },
   [CHIPS_TAGS.REACT]: {
     image: react.src,
-    name: "React.js",
+    name: "React",
   },
   [CHIPS_TAGS.HTML]: {
     image: html.src,
@@ -118,6 +119,10 @@ const chipData = {
     image: tailwind.src,
     name: "Tailwind CSS",
   },
+  [CHIPS_TAGS.REDUX]: {
+    image: redux.src,
+    name: "Redux",
+  },
 };
 ---
 
@@ -134,7 +139,7 @@ const chipData = {
 <style>
   .chips {
     display: flex;
-    gap: 0.4rem 1rem;
+    gap: 0.3rem 0.5rem;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 1rem;
