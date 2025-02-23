@@ -24,6 +24,7 @@ import spring from "../assets/dev/spring.svg";
 import typescript from "../assets/dev/typescript.svg";
 import tailwind from "../assets/dev/tailwind.svg";
 import redux from "../assets/dev/redux.svg";
+import express from "../assets/dev/express.svg";
 
 const { data } = Astro.props;
 const chipData = {
@@ -122,6 +123,10 @@ const chipData = {
   [CHIPS_TAGS.REDUX]: {
     image: redux.src,
     name: "Redux",
+  },
+  [CHIPS_TAGS.EXPRESS]: {
+    image: express.src,
+    name: "Express",
   },
 };
 ---

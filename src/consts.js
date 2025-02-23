@@ -22,4 +22,5 @@ export const CHIPS_TAGS = {
   TYPESCRIPT: "typescript",
   TAILWIND: "tailwind",
   REDUX: "redux",
+  EXPRESS: "express",
 };

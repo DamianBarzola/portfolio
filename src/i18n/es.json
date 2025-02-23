@@ -54,6 +54,13 @@
       "web":"https://fletes-app.vercel.app/",
       "imageKey":"fletesApp",
       "repo":""
+    },{
+      "name":"Classless css",
+      "description":"Librería de estilos CSS sin clases. Permite aplicar estilos a los elementos HTML sin la necesidad de utilizar clases, simplificando el desarrollo y mejorando la legibilidad del código.",
+      "technologies":["css"],
+      "web":"https://damianbarzola.github.io/classless-css/",
+      "imageKey":"classlessCss",
+      "repo":""
     }
   ],
   "buttons": {
