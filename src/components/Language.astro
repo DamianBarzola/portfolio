@@ -1,12 +1,13 @@
 ---
-import translate from "../assets/translate.svg";
+import TranslateIcon from "../assets/translate.svg";
 const currentLang = new URL(Astro.url).pathname.split("/")[1];
 ---
 
 <div class="language-container">
   <div class="translate-icon">
-    <img src={translate.src} alt="" />
+    <TranslateIcon />
   </div>
+  <div class="separator"></div>
   <a href="/es" class={currentLang === "es" ? "active" : ""}>Es</a>
   <a href="/en" class={currentLang === "en" ? "active" : ""}>En</a>
 </div>
@@ -15,6 +16,7 @@ const currentLang = new URL(Astro.url).pathname.split("/")[1];
     display: flex;
     gap: 1dvw;
     background-color: var(--card);
+    border: 1px solid var(--line);
     border-radius: 0.4rem;
     padding: 0.3rem 0.4rem;
   }
@@ -23,8 +25,15 @@ const currentLang = new URL(Astro.url).pathname.split("/")[1];
     align-items: center;
     justify-content: center;
   }
-  .translate-icon img {
+
+  svg {
     height: 1.2rem;
+    fill: var(--text-secondary);
+  }
+  .separator {
+    width: 2px;
+    margin: 3px 0;
+    background-color: var(--line);
   }
   .language-container a {
     padding: 0.2rem 0.4rem;

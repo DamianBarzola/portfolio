@@ -1,13 +1,15 @@
 ---
 import Language from "./Language.astro";
+import Theme from "./Theme.astro";
 
 const year = new Date().getFullYear();
 const { copy } = Astro.props;
 ---
 
 <footer>
-  <div>
+  <div class="left-footer">
     <Language />
+    <Theme />
   </div>
   <div><span>© {year} Damian Barzola. {copy}.</span></div>
 </footer>
@@ -21,9 +23,15 @@ const { copy } = Astro.props;
     font-size: 0.8rem;
     animation: fadeIn 1s ease-in-out;
   }
+  .left-footer {
+    display: flex;
+    gap: 2rem;
+  }
   @media screen and (max-width: 768px) {
     footer {
       padding: 1rem 0.5rem;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 </style>

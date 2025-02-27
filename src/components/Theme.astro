@@ -1,0 +1,92 @@
+---
+import ThemeIcon from "../assets/theme.svg";
+import DarkIcon from "../assets/dark.svg";
+import LightIcon from "../assets/light.svg";
+---
+
+<div class="theme-container">
+  <div class="theme-icon">
+    <ThemeIcon />
+    <!-- <img src={theme.src} alt="" /> -->
+  </div>
+  <div class="separator"></div>
+  <button type="button" id="dark">
+    <DarkIcon />
+  </button>
+  <button type="button" id="light">
+    <LightIcon />
+  </button>
+</div>
+<script>
+  (() => {
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    const btn = document.querySelector("#" + currentTheme);
+
+    btn.classList.add("active");
+  })();
+
+  const darkBtn = document.querySelector("#dark");
+  const lightBtn = document.querySelector("#light");
+
+  darkBtn.addEventListener("click", () => {
+    lightBtn.classList.remove("active");
+    darkBtn.classList.add("active");
+    localStorage.setItem("theme", "dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+  });
+
+  lightBtn.addEventListener("click", () => {
+    // body.classList.add("light");
+    darkBtn.classList.remove("active");
+    lightBtn.classList.add("active");
+    localStorage.setItem("theme", "light");
+    document.documentElement.setAttribute("data-theme", "light");
+  });
+</script>
+<style>
+  svg {
+    fill: var(--text-secondary);
+    height: 1.2rem;
+  }
+  .theme-container {
+    display: flex;
+    gap: 1dvw;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.4rem;
+  }
+  .theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .separator {
+    width: 2px;
+    margin: 3px 0;
+    background-color: var(--line);
+  }
+  .theme-container button {
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: 0.3s ease all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+  }
+  .theme-container .active {
+    cursor: pointer;
+    background-color: var(--text-primary);
+    color: rgb(39, 39, 39);
+  }
+  .theme-container button:hover {
+    color: var(--text-primary);
+  }
+  .theme-container .active:hover {
+    color: var(--black);
+  }
+</style>

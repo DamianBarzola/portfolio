@@ -19,9 +19,9 @@ const { translations } = Astro.props;
     <Menu translations={translations?.menu} />
   </section>
   <section class="info">
-    <!-- <AboutSection translations={translations} /> -->
-    <!-- <ExperienceSection translations={translations} /> -->
-    <!-- <EducationSection translations={translations} /> -->
+    <AboutSection translations={translations} />
+    <ExperienceSection translations={translations} />
+    <EducationSection translations={translations} />
     <ProjectsSection translations={translations} />
   </section>
 </main>
@@ -30,14 +30,12 @@ const { translations } = Astro.props;
   let navLinks = document.querySelectorAll("ul li a");
   let sectionsContainer = document.querySelector("section.info");
 
-  console.log("Secciones encontradas:", sections.length);
   sectionsContainer.onscroll = () => {
     sections.forEach((sec) => {
       let top = sectionsContainer.scrollTop;
       let offset = sec.offsetTop - 250;
       let height = sec.offsetHeight;
       let id = sec.getAttribute("id");
-      console.log("Top:", top, "Offset:", offset, "Height:", height, "ID:", id);
 
       if (top >= offset && top < offset + height) {
         navLinks.forEach((link) => {
@@ -99,6 +97,9 @@ const { translations } = Astro.props;
     main {
       flex-direction: column;
       padding: 2rem 1rem;
+    }
+    .info {
+      scrollbar-gutter: initial;
     }
     .contact-info {
       text-align: center;

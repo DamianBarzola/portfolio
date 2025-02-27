@@ -1,13 +1,20 @@
 ---
 import Chips from "./Chips.astro";
-import github from "../assets/github-white.svg";
-import web from "../assets/web.svg";
+import GithubIcon from "../assets/github.svg";
+import WebIcon from "../assets/web.svg";
 import costosApp from "../assets/images/costos-app.png";
+import costosApp1 from "../assets/images/costos-app1.png";
+import costosApp2 from "../assets/images/costos-app2.png";
+import costosApp3 from "../assets/images/costos-app3.png";
+import cineApp from "../assets/images/cine-app.svg";
+import fleteros from "../assets/images/fleteros.png";
 
 const { translations } = Astro.props;
 
 const imageMap = {
   costosApp: costosApp.src,
+  cineApp: cineApp.src,
+  fleteros: fleteros.src,
 };
 ---
 
@@ -19,7 +26,7 @@ const imageMap = {
         translations.projects.map((project) => (
           <div class="card">
             <div class="image">
-              <img src={imageMap[project.imageKey]} alt="" />
+              <img src={imageMap[project.imageKey[0]]} alt="" />
             </div>
             <div class="info">
               <h4>{project.name}</h4>
@@ -33,11 +40,7 @@ const imageMap = {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={web.src}
-                      alt="web icon"
-                      style={{ height: "1.7rem" }}
-                    />
+                    <WebIcon style={{ height: "1.7rem" }} />
                     <span>{translations?.buttons.web}</span>
                   </a>
                 )}
@@ -48,11 +51,7 @@ const imageMap = {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={github.src}
-                      alt="github icon"
-                      style={{ height: "1.4rem" }}
-                    />
+                    <GithubIcon style={{ height: "1.4rem", width: "1.4rem" }} />
                     <span>{translations?.buttons.code}</span>
                   </a>
                 )}
@@ -73,6 +72,7 @@ const imageMap = {
     flex-direction: column;
     width: 100%;
     gap: 2rem;
+    padding-bottom: 0.5rem;
   }
   h4 {
     font-size: 1.5rem;
@@ -129,8 +129,8 @@ const imageMap = {
     opacity: 1;
     background-color: var(--line);
   }
-  .button img {
-    fill: white;
+  .button svg {
+    fill: var(--text-secondary);
   }
   h4 {
     margin: 0;
@@ -143,6 +143,7 @@ const imageMap = {
   @media screen and (max-width: 768px) {
     .card {
       flex-direction: column;
+      grid-template-columns: repeat(1, 1fr);
     }
     .image {
       width: 100%;
@@ -152,7 +153,8 @@ const imageMap = {
       max-height: 10rem;
     }
     .info {
-      width: 100%;
+      width: inherit;
+      padding: 0.5rem;
     }
   }
 </style>

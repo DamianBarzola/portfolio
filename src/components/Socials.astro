@@ -1,18 +1,18 @@
 ---
-import github from "../assets/github-white.svg";
-import linkedin from "../assets/linkedin.svg";
-import mail from "../assets/mail.svg";
+import GithubIcon from "../assets/github.svg";
+import LinkedinIcon from "../assets/linkedin.svg";
+import MailIcon from "../assets/mail.svg";
 
 const { translations } = Astro.props;
 ---
 
 <div class="social">
   <a href={translations?.linkedin} target="_blank" rel="noopener noreferrer">
-    <img src={linkedin.src} alt="linkedin" style={{ height: "1.7rem" }} />
+    <LinkedinIcon style={{ height: "1.7rem" }} />
   </a>
   <div class="separator"></div>
   <a href={translations?.github} target="_blank" rel="noopener noreferrer">
-    <img src={github.src} alt="github" style={{ height: "1.6rem" }} />
+    <GithubIcon style={{ height: "1.7rem", width: "1.7rem" }} />
   </a>
   <div class="separator"></div>
   <a
@@ -20,7 +20,7 @@ const { translations } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img src={mail.src} alt="mail" />
+    <MailIcon style={{ height: "1.7rem" }} />
   </a>
 </div>
 <style>
@@ -32,12 +32,13 @@ const { translations } = Astro.props;
     width: 100%;
     padding-top: 1rem;
   }
-  img {
+  svg {
+    fill: var(--text-secondary);
     height: 1.9rem;
     padding: 5px;
     transition: 0.3s ease all;
   }
-  img:hover {
+  svg:hover {
     scale: 1.15;
     cursor: pointer;
   }

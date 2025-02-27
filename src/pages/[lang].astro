@@ -10,7 +10,6 @@ export async function getStaticPaths() {
 
 const allowedLanguages = ["es", "en"];
 const { lang } = Astro.params;
-console.log(lang);
 if (!lang || !allowedLanguages.includes(lang)) {
   return Astro.redirect("/es");
 }
