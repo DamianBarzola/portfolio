@@ -33,9 +33,10 @@ const currentLang = params.lang || "es";
     --text-primary: var(--white);
     --text-secondary: var(--platinum);
     --text-tertiary: #b1b1b1;
+    --text-active: var(--black);
 
     --card: rgb(28 28 28 / 49%);
-    --chips: #181818;
+    --chips: #1818189e;
 
     --bg-gradient: linear-gradient(
       180deg,
@@ -50,18 +51,15 @@ const currentLang = params.lang || "es";
     --text-primary: var(--black);
     --text-secondary: #202020;
     --text-tertiary: #464646;
+    --text-active: var(--white);
 
     --card: rgb(255 255 255 / 50%);
-    --chips: #ebebeb;
-    --bg-gradient: linear-gradient(
-      180deg,
-      rgb(255 255 255) 0%,
-      rgb(239 239 239) 35%,
-      #cdcdcd 100%
-    );
+    --chips: #ffffff73;
+    --bg-gradient: linear-gradient(to top, #e6f3ff 0%, #ace0f9a3 100%);
 
     --line: rgb(190, 190, 190);
   }
+
   html {
     min-height: 100dvh;
     background: var(--bg-gradient);

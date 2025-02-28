@@ -48,7 +48,8 @@ const currentLang = new URL(Astro.url).pathname.split("/")[1];
   .language-container .active {
     cursor: pointer;
     background-color: var(--text-primary);
-    color: rgb(39, 39, 39);
+    color: var(--text-active);
+    fill: var(--text-active);
   }
   .language-container a:hover {
     color: var(--text-primary);
