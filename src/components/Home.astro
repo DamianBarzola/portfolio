@@ -10,7 +10,7 @@ const { translations } = Astro.props;
 ---
 
 <main id="container">
-  <section>
+  <section class="home-data">
     <div class="contact-info">
       <h1>{translations?.name}</h1>
       <h3>{translations?.profession}</h3>
@@ -65,7 +65,6 @@ const { translations } = Astro.props;
 
   section {
     align-items: start;
-    flex-direction: column;
     width: 100%;
   }
   hr {
@@ -89,8 +88,13 @@ const { translations } = Astro.props;
     overflow: auto;
     scrollbar-gutter: stable;
   }
-
+  .home-data {
+    margin-right: 1rem;
+  }
   @media screen and (max-width: 768px) {
+    .home-data {
+      margin: 0;
+    }
     #container {
       height: 100%;
     }
@@ -107,6 +111,7 @@ const { translations } = Astro.props;
       justify-content: center;
       display: flex;
       flex-direction: column;
+      gap: 0.4rem;
     }
   }
   @media screen and (max-height: 368px) {

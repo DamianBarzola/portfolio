@@ -8,11 +8,11 @@ const { translations } = Astro.props;
 
 <div class="social">
   <a href={translations?.linkedin} target="_blank" rel="noopener noreferrer">
-    <LinkedinIcon style={{ height: "1.7rem" }} />
+    <LinkedinIcon style={{ height: "1.9rem" }} />
   </a>
   <div class="separator"></div>
   <a href={translations?.github} target="_blank" rel="noopener noreferrer">
-    <GithubIcon style={{ height: "1.7rem", width: "1.7rem" }} />
+    <GithubIcon style={{ height: "1.9rem", width: "1.9rem" }} />
   </a>
   <div class="separator"></div>
   <a
@@ -20,7 +20,7 @@ const { translations } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
   >
-    <MailIcon style={{ height: "1.7rem" }} />
+    <MailIcon style={{ height: "2rem" }} />
   </a>
 </div>
 <style>
@@ -30,11 +30,11 @@ const { translations } = Astro.props;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 0.4rem;
   }
   svg {
     fill: var(--text-secondary);
-    height: 1.9rem;
+    height: 2rem;
     padding: 5px;
     transition: 0.3s ease all;
   }

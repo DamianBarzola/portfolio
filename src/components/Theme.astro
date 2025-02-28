@@ -82,12 +82,16 @@ import LightIcon from "../assets/light.svg";
     cursor: pointer;
     background-color: var(--text-primary);
     color: var(--text-active);
+    transition: 0.3s ease all;
   }
   .active svg {
     fill: var(--text-active);
   }
+  svg:hover {
+    opacity: 0.8;
+  }
   .theme-container button:hover {
-    color: var(--text-primary);
+    opacity: 0.9;
   }
   .theme-container .active:hover {
     color: var(--black);

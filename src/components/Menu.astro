@@ -28,19 +28,29 @@ const { translations } = Astro.props;
   }
   li {
     margin: 1.5rem 0;
-    cursor: pointer;
     transition: 0.3s ease-in-out all;
   }
   a {
     color: var(--text-secondary);
     text-decoration: none;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: 0.1s ease-in-out all;
+    height: 2rem;
   }
   .active {
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.7rem;
     position: relative;
     padding: 0 20px;
+    opacity: 1;
+  }
+  a:hover {
+    opacity: 1;
   }
   .active::before {
     content: "";

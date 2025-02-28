@@ -122,16 +122,23 @@ const imageMap = {
     opacity: 0.8;
     transition: all ease-in-out 0.3s;
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     gap: 0.6rem;
+    font-weight: 500;
   }
   .button:hover {
     opacity: 1;
-    background-color: var(--line);
+    background-color: var(--text-secondary);
+    color: var(--text-active);
   }
   .button svg {
+    transition: all ease-in-out 0.3s;
     fill: var(--text-secondary);
   }
+  .button:hover > svg {
+    fill: var(--text-active);
+  }
+
   h4 {
     margin: 0;
     margin-bottom: 0.5rem;
