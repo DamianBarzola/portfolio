@@ -1,13 +1,11 @@
 {
   "name": "Damian Barzola",
-  
-
-  "profession": "Information systems engineer",
-  "social":{
+  "social": {
     "linkedin": "https://www.linkedin.com/in/damianbarzola/",
     "github": "https://github.com/damianbarzola",
     "email": "mailto:damianebarzola@example.com"
   },
+  "profession": "Information systems engineer",
   "copyright": "All rights reserved",
   "menu": {
     "profile": "Professional Profile",
@@ -21,7 +19,7 @@
       "company": "Ingeniería Boggio / Trini Talkbot",
       "position": "Software Developer",
       "period": "January 2022 - Present",
-      "description": "<p><u>Architecture migration:</u> Transition from a monolithic Python Flask application to a modern architecture based on a backend API developed with Flask and a PWA frontend developed with React.js. Improving the scalability, robustness, and maintainability of the project.</p><p><u>Continuous development and maintenance:</u> Continuous development and maintenance of new features for the Trini Talkbot project, specializing in the creation and management of chatbots. This includes, among others, the real-time chat system, the creation of an interactive analytics dashboard for key data visualization, the connectors section to integrate with various services, and the campaigns section to send multiple messages to different contacts.</p><p><u>Implementation of automated tests:</u> Creation of an automated testing system, improving code quality.</p><p><u>Design and UI/UX:</u> Design and layout of the user interface, improving the usability and overall aesthetics of the application.</p>"
+      "description": "<p>In this role, I participated in various areas of software development, starting with the development of a conversational bot. Later, I took on the main responsibility for developing a new web platform, focusing on frontend development and collaborating on backend construction.</p><p><b>Main responsibilities:</b></p><p><u>Architecture migration:</u> Transition from a monolithic Python Flask application to a modern architecture based on a backend API developed with Flask and a PWA frontend developed with React.js. Improving the scalability, robustness, and maintainability of the project.</p><p><u>Continuous development and maintenance:</u> Continuous development and maintenance of new features for the Trini Talkbot project, specializing in the creation and management of chatbots. This includes, among others, the real-time chat system, the creation of an interactive analytics dashboard for key data visualization, the connectors section to integrate with various services, and the campaigns section to send multiple messages to different contacts.</p><p><u>Implementation of automated tests:</u> Creation of an automated testing system, improving code quality.</p><p><u>Design and UI/UX:</u> Design and layout of the user interface, improving the usability and overall aesthetics of the application.</p>"
     }
   ],
   "education": [
@@ -31,5 +29,78 @@
       "period": "2017 - 2023",
       "location": "Rosario, Argentina"
     }
-  ]
+  ],
+  "projects": [
+    {
+      "name": "Costos App",
+      "description": "Web application that allows creating custom templates to efficiently calculate the costs of different products. Designed with a mobile-friendly interface, it offers a smooth experience, allowing users to save the list of calculated products for future reference.",
+      "technologies": [
+        "next",
+        "mui",
+        "javascript",
+        "tailwind"
+      ],
+      "web": "https://costos-app.vercel.app/",
+      "imageKey": [
+        "costosApp",
+        "costosApp1",
+        "costosApp2",
+        "costosApp3"
+      ],
+      "repo": "https://github.com/DamianBarzola/costos-app"
+    },
+    {
+      "name": "Cine App",
+      "description": "Web application for managing a cinema's schedule. It allows users to view the movies currently showing, see details of each movie, make reservations, and process returns.",
+      "technologies": [
+        "react",
+        "javascript",
+        "redux",
+        "bootstrap",
+        "java",
+        "spring",
+        "mysql"
+      ],
+      "web": "",
+      "imageKey": [
+        "cineApp"
+      ],
+      "repo": "https://github.com/DamianBarzola/cineApp-frontend"
+    },
+    {
+      "name": "FleteRos",
+      "description": "Web application where customers post their transportation needs and receive offers from drivers. It also allows tracking the status of the order.",
+      "technologies": [
+        "react",
+        "javascript",
+        "redux",
+        "express",
+        "typescript",
+        "spring",
+        "mysql"
+      ],
+      "web": "",
+      "imageKey": [
+        "fleteros"
+      ],
+      "repo": "https://github.com/DamianBarzola/fleteRos-frontend"
+    },
+    {
+      "name": "Classless CSS",
+      "description": "Classless CSS library. It allows applying styles to HTML elements without the need to use classes, simplifying development and improving code readability.",
+      "technologies": [
+        "css",
+        "html"
+      ],
+      "web": "",
+      "imageKey": [
+        "classlessCss"
+      ],
+      "repo": "https://github.com/DamianBarzola/db.css"
+    }
+  ],
+  "buttons": {
+    "web": "Website",
+    "code": "Code"
+  }
 }
