@@ -1,4 +1,5 @@
 ---
+import NewTab from "../assets/newTab.svg";
 const { translations } = Astro.props;
 ---
 
@@ -7,14 +8,21 @@ const { translations } = Astro.props;
   {
     translations.education &&
       translations.education.map(
-        ({ institution, degree, period, location }) => (
+        ({ institution, degree, period, location, degreeInfo }) => (
           <div class="education">
             <div class="date">
               <p>{period}</p>
               <p>{location}</p>
             </div>
             <div class="info">
-              <p class="title">{degree}</p>
+              <p class="title">
+                {degree}{" "}
+                {degreeInfo && (
+                  <a href={degreeInfo} target="_blank">
+                    <NewTab />
+                  </a>
+                )}
+              </p>
               <div class="description">
                 <p>{institution}</p>
               </div>
@@ -42,6 +50,17 @@ const { translations } = Astro.props;
   .title {
     font-weight: bold;
     font-size: 18px;
+    display: flex;
+    align-self: center;
+    gap: 5px;
+  }
+  .title a {
+    display: flex;
+    align-items: center;
+  }
+  .title a svg {
+    height: 18px;
+    fill: var(--text-tertiary);
   }
   .description {
     color: var(--text-tertiary);

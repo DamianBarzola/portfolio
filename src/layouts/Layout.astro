@@ -63,7 +63,9 @@ const currentLang = params.lang || "es";
   html {
     min-height: 100dvh;
     background: var(--bg-gradient);
+    position: relative;
   }
+
   html,
   body {
     margin: 0;
@@ -71,6 +73,59 @@ const currentLang = params.lang || "es";
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
       Arial, sans-serif;
     color: var(--text-primary);
+  }
+  body::after,
+  body::before,
+  html::after,
+  html::before {
+    content: "";
+    display: block;
+    background: var(--text-tertiary);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  body::after,
+  body::before {
+    width: 2px;
+    height: 100%;
+  }
+  html::after,
+  html::before {
+    height: 2px;
+    width: 100%;
+  }
+
+  html::after {
+    top: 1.5rem;
+    left: 0;
+  }
+
+  html::before {
+    bottom: 1rem;
+    left: 0;
+  }
+  body::before {
+    top: 0;
+    right: 1.5rem;
+  }
+  body::after {
+    top: 0;
+    left: 1.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    body::after {
+      left: 0.4rem;
+    }
+    body::before {
+      right: 0.4rem;
+    }
+    html::after {
+      top: 0.4rem;
+    }
+    html::before {
+      bottom: 0.4rem;
+    }
   }
   body {
     height: 100%;
