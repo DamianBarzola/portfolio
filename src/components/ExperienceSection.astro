@@ -2,7 +2,7 @@
 import { CHIPS_TAGS } from "../consts.js";
 import Chips from "./Chips.astro";
 
-const { translations } = Astro.props;
+const { data } = Astro.props;
 const chips = [
   CHIPS_TAGS.REACT,
   CHIPS_TAGS.JAVASCRIPT,
@@ -18,28 +18,26 @@ const chips = [
 ---
 
 <section id="experience">
-  <span class="section-title">{translations?.menu.experience}</span>
+  <span class="section-title">{data?.menu.experience}</span>
   {
-    translations.experience &&
-      translations.experience.map(
-        ({ position, period, company, description }) => {
-          return (
-            <div class="experience">
-              <div class="line" />
-              <div class="data">
-                <div class="header">
-                  <p class="title">
-                    {position} - {company}
-                  </p>
-                  <p class="date">{period}</p>
-                </div>
-                <div class="description" set:html={description} />
-                <Chips data={chips} />
+    data.experience &&
+      data.experience.map(({ position, period, company, description }) => {
+        return (
+          <div class="experience">
+            <div class="line" />
+            <div class="data">
+              <div class="header">
+                <p class="title">
+                  {position} - {company}
+                </p>
+                <p class="date">{period}</p>
               </div>
+              <div class="description" set:html={description} />
+              <Chips data={chips} />
             </div>
-          );
-        }
-      )
+          </div>
+        );
+      })
   }
 </section>
 <style>

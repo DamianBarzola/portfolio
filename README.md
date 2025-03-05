@@ -1,48 +1,62 @@
-# Astro Starter Kit: Basics
+# Portfolio
+
+## Description
+
+This is a single-page portfolio built with Astro. It provides various features such as navigation, theme switching, language switching, and dynamic content updates based on JSON files. The project is designed to be customizable and can be used by anyone who modifies the provided JSON data.
+
+## Features
+
+- Navigation menu to jump between sections
+- Language switching (supports editing `es.json` and `en.json` in `i18n` folder)
+- Dark/Light theme toggle
+- Display social media links
+- Content dynamically updates based on JSON files
+
+## Project Structure
+
+```
+portfolio/
+│-- assets/       # Static assets (images, icons, etc.)
+│-- components/   # Reusable UI components
+│-- i18n/         # Localization JSON files (es.json, en.json)
+│-- layouts/      # Page layout templates
+│-- pages/        # Main application pages
+```
+
+## Installation & Usage
+
+### Prerequisites
+
+- Node.js installed
+
+### Install dependencies
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### Development
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npm run dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Build
 
-## 🧞 Commands
+```sh
+npm run build
+```
 
-All commands are run from the root of the project, from a terminal:
+### Preview
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```sh
+npm run preview
+```
 
-## 👀 Want to learn more?
+## Customization
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To modify the content, update the `es.json` and `en.json` files in the `i18n` folder. The application will reflect the changes dynamically.
+
+## License
+
+This project is open-source. Feel free to modify and use it as needed.

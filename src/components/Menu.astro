@@ -1,21 +1,39 @@
 ---
-const { translations } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <div>
   <ul>
-    <li>
-      <a class="active" href="#about">{translations?.profile}</a>
-    </li>
-    <li>
-      <a href="#experience">{translations?.experience}</a>
-    </li>
-    <li>
-      <a href="#education">{translations?.education}</a>
-    </li>
-    <li>
-      <a href="#projects">{translations?.projects}</a>
-    </li>
+    {
+      data?.about && (
+        <li>
+          <a class="active" href="#about">
+            {data?.menu?.profile}
+          </a>
+        </li>
+      )
+    }
+    {
+      data?.experience?.length > 0 && (
+        <li>
+          <a href="#experience">{data?.menu?.experience}</a>
+        </li>
+      )
+    }
+    {
+      data?.education?.length > 0 && (
+        <li>
+          <a href="#education">{data?.menu?.education}</a>
+        </li>
+      )
+    }
+    {
+      data?.projects?.length > 0 && (
+        <li>
+          <a href="#projects">{data?.menu?.projects}</a>
+        </li>
+      )
+    }
   </ul>
 </div>
 <script>

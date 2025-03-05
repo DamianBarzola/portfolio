@@ -1,10 +1,10 @@
 ---
-const { translations } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <section id="about">
-  <span class="section-title">{translations?.menu.profile}</span>
-  <div set:html={translations?.about} />
+  <span class="section-title">{data?.menu.profile}</span>
+  <div set:html={data?.about} />
 </section>
 
 <style>

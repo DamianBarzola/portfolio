@@ -6,23 +6,23 @@ import Menu from "./Menu.astro";
 import Socials from "./Socials.astro";
 import ProjectsSection from "./ProjectsSection.astro";
 
-const { translations } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <main id="container">
   <section class="home-data">
     <div class="contact-info">
-      <h1>{translations?.name}</h1>
-      <h3>{translations?.profession}</h3>
-      <Socials translations={translations?.social} />
+      <h1>{data?.name}</h1>
+      <h3>{data?.profession}</h3>
+      <Socials data={data?.social} />
     </div>
-    <Menu translations={translations?.menu} />
+    <Menu data={data} />
   </section>
   <section class="info">
-    <AboutSection translations={translations} />
-    <ExperienceSection translations={translations} />
-    <EducationSection translations={translations} />
-    <ProjectsSection translations={translations} />
+    {data?.about && <AboutSection data={data} />}
+    {data?.experience?.length > 0 && <ExperienceSection data={data} />}
+    {data?.education?.length > 0 && <EducationSection data={data} />}
+    {data?.projects?.length > 0 && <ProjectsSection data={data} />}
   </section>
 </main>
 <script is:inline>

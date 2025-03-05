@@ -1,13 +1,13 @@
 ---
 import NewTab from "../assets/newTab.svg";
-const { translations } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <section id="education">
-  <span class="section-title">{translations?.menu.education}</span>
+  <span class="section-title">{data?.menu.education}</span>
   {
-    translations.education &&
-      translations.education.map(
+    data.education &&
+      data.education.map(
         ({ institution, degree, period, location, degreeInfo }) => (
           <div class="education">
             <div class="date">
