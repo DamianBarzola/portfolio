@@ -14,9 +14,15 @@ if (!lang || !allowedLanguages.includes(lang)) {
   return Astro.redirect("/es");
 }
 const translations = await loadTranslations(lang);
+
+console.log(translations);
 ---
 
-<Layout lang={lang}>
+<Layout
+  lang={lang}
+  metaDescription={translations.metaDescription}
+  name={translations.name}
+>
   <Home data={translations} />
-  <Footer copy={translations.copyright} />
+  <Footer copy={translations.copyright} buttons={translations.buttons} />
 </Layout>

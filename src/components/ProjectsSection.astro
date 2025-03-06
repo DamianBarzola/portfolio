@@ -19,8 +19,8 @@ const imageMap = {
   <span class="section-title">{data?.menu.projects}</span>
   <div class="container">
     {
-      data.projects &&
-        data.projects.map((project) => (
+      data?.projects &&
+        data?.projects.map((project) => (
           <div class="card">
             {/* <div class="image">
               <img src={imageMap[project.imageKey[0]]} alt="" />
@@ -38,7 +38,7 @@ const imageMap = {
                     rel="noopener noreferrer"
                   >
                     <WebIcon style={{ height: "1.7rem" }} />
-                    <span>{data?.buttons.web}</span>
+                    <span>{data?.buttons?.web}</span>
                   </a>
                 )}
                 {project.repo && (
@@ -49,7 +49,7 @@ const imageMap = {
                     rel="noopener noreferrer"
                   >
                     <GithubIcon style={{ height: "1.4rem", width: "1.4rem" }} />
-                    <span>{data?.buttons.code}</span>
+                    <span>{data?.buttons?.code}</span>
                   </a>
                 )}
               </div>

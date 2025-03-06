@@ -1,13 +1,13 @@
 ---
 import NewTab from "../assets/newTab.svg";
-const { data } = Astro.props;
+const { data, buttons } = Astro.props;
 ---
 
 <section id="education">
   <span class="section-title">{data?.menu.education}</span>
   {
-    data.education &&
-      data.education.map(
+    data?.education &&
+      data?.education.map(
         ({ institution, degree, period, location, degreeInfo }) => (
           <div class="education">
             <div class="date">
@@ -18,7 +18,11 @@ const { data } = Astro.props;
               <p class="title">
                 {degree}{" "}
                 {degreeInfo && (
-                  <a href={degreeInfo} target="_blank">
+                  <a
+                    href={degreeInfo}
+                    target="_blank"
+                    aria-label={buttons?.moreInfo}
+                  >
                     <NewTab />
                   </a>
                 )}

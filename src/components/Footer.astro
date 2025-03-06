@@ -3,13 +3,13 @@ import Language from "./Language.astro";
 import Theme from "./Theme.astro";
 
 const year = new Date().getFullYear();
-const { copy } = Astro.props;
+const { copy, buttons } = Astro.props;
 ---
 
 <footer>
   <div class="left-footer">
-    <Language />
-    <Theme />
+    <Language buttons={buttons} />
+    <Theme buttons={buttons} />
   </div>
   <div><span>© {year} Damian Barzola. {copy}.</span></div>
 </footer>

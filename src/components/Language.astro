@@ -1,5 +1,6 @@
 ---
 import TranslateIcon from "../assets/translate.svg";
+const { buttons } = Astro.props;
 const currentLang = new URL(Astro.url).pathname.split("/")[1];
 ---
 
@@ -8,8 +9,16 @@ const currentLang = new URL(Astro.url).pathname.split("/")[1];
     <TranslateIcon />
   </div>
   <div class="separator"></div>
-  <a href="/es" class={currentLang === "es" ? "active" : ""}>Es</a>
-  <a href="/en" class={currentLang === "en" ? "active" : ""}>En</a>
+  <a
+    href="/es"
+    class={currentLang === "es" ? "active" : ""}
+    aria-label={buttons?.toggleLangToEs}>Es</a
+  >
+  <a
+    href="/en"
+    class={currentLang === "en" ? "active" : ""}
+    aria-label={buttons?.toggleLangToEn}>En</a
+  >
 </div>
 <style>
   .language-container {

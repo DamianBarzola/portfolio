@@ -1,5 +1,7 @@
 {
+
   "name": "Damian Barzola",
+  "metaDescription": "Portfolio de Damian Barzola, Ingeniero en Sistemas de Información con experiencia en desarrollo de software, análisis de datos y diseño UI/UX. Presentación de proyectos destacados en chatbots, aplicaciones web y librerías CSS. Contacto disponible a través de LinkedIn y GitHub.",
   "social": {
     "linkedin": "https://www.linkedin.com/in/damianbarzola/",
     "github": "https://github.com/damianbarzola",
@@ -102,6 +104,14 @@
   ],
   "buttons": {
     "web": "Sitio web",
-    "code": "Código"
+    "code": "Código",
+    "toLinkedin": "Ir a LinkedIn",
+    "toGithub": "Ir a GitHub",
+    "toEmail": "Enviar correo",
+    "toggleDarkMode": "Cambiar a modo oscuro",
+    "toggleLightMode": "Cambiar a modo claro",
+    "toggleLangToEs": "Cambiar a inglés",
+    "toggleLangToEn": "Cambiar a español",
+    "moreInfo": "Más información"
   }
 }

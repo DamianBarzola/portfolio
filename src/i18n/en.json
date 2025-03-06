@@ -1,9 +1,10 @@
 {
   "name": "Damian Barzola",
+  "metaDescription": "Portfolio of Damian Barzola, Information Systems Engineer with experience in software development, data analysis, and UI/UX design. Showcasing key projects in chatbots, web applications, and CSS libraries. Contact available via LinkedIn and GitHub.",
   "social": {
     "linkedin": "https://www.linkedin.com/in/damianbarzola/",
     "github": "https://github.com/damianbarzola",
-    "email": "mailto:damianebarzola@example.com"
+    "email": "damianebarzola@gmail.com"
   },
   "profession": "Information systems engineer",
   "copyright": "All rights reserved",
@@ -103,6 +104,15 @@
   ],
   "buttons": {
     "web": "Website",
-    "code": "Code"
+    "code": "Code",
+    "toLinkedin": "Go to LinkedIn",
+    "toGithub": "Go to GitHub",
+    "toEmail": "Send email",
+    "toggleDarkMode": "Toggle dark mode",
+    "toggleLightMode": "Toggle light mode",
+    "toggleLangToEs": "Toggle language to Spanish",
+    "toggleLangToEn": "Toggle language to English",
+     "moreInfo": "More information"
+
   }
 }

@@ -1,7 +1,8 @@
 ---
-const params = Astro.params;
+const { lang, metaDescription, name } = Astro.props;
 
-const currentLang = params.lang || "es";
+const currentLang = lang || "es";
+console.log(metaDescription);
 ---
 
 <!doctype html>
@@ -11,9 +12,19 @@ const currentLang = params.lang || "es";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="alternate" hreflang="en" href="/en" />
-    <link rel="alternate" hreflang="es" href="/es" />
-    <title>Portfolio</title>
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://damianbarzola.vercel.app/en"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://damianbarzola.vercel.app/es"
+    />
+
+    <title>{name} | Portfolio</title>
+    <meta name="description" content={metaDescription} />
   </head>
   <body>
     <slot />

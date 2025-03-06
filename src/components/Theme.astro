@@ -2,18 +2,18 @@
 import ThemeIcon from "../assets/theme.svg";
 import DarkIcon from "../assets/dark.svg";
 import LightIcon from "../assets/light.svg";
+const { buttons } = Astro.props;
 ---
 
 <div class="theme-container">
   <div class="theme-icon">
     <ThemeIcon />
-    <!-- <img src={theme.src} alt="" /> -->
   </div>
   <div class="separator"></div>
-  <button type="button" id="dark">
+  <button type="button" id="dark" aria-label={buttons?.toggleDarkMode}>
     <DarkIcon />
   </button>
-  <button type="button" id="light">
+  <button type="button" id="light" aria-label={buttons?.toggleLightMode}>
     <LightIcon />
   </button>
 </div>

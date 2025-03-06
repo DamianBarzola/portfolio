@@ -133,7 +133,7 @@ const chipData = {
 
 <div class="chips">
   {
-    data.map((chip) => (
+    data?.map((chip) => (
       <div class="chip">
         <img src={chipData[chip]?.image} alt={chipData[chip]?.name} />
         <span>{chipData[chip]?.name}</span>

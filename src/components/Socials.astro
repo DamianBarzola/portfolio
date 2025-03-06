@@ -3,19 +3,34 @@ import GithubIcon from "../assets/github.svg";
 import LinkedinIcon from "../assets/linkedin.svg";
 import MailIcon from "../assets/mail.svg";
 
-const { data } = Astro.props;
+const { data, buttons } = Astro.props;
 ---
 
 <div class="social">
-  <a href={data?.linkedin} target="_blank" rel="noopener noreferrer">
+  <a
+    href={data?.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={buttons?.toLinkedin}
+  >
     <LinkedinIcon style={{ height: "1.9rem" }} />
   </a>
   <div class="separator"></div>
-  <a href={data?.github} target="_blank" rel="noopener noreferrer">
+  <a
+    href={data?.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={buttons?.toGithub}
+  >
     <GithubIcon style={{ height: "1.9rem", width: "1.9rem" }} />
   </a>
   <div class="separator"></div>
-  <a href={"mailto:" + data?.mail} target="_blank" rel="noopener noreferrer">
+  <a
+    href={"mailto:" + data?.email}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={buttons?.toEmail}
+  >
     <MailIcon style={{ height: "2rem" }} />
   </a>
 </div>

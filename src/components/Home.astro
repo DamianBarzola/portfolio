@@ -14,14 +14,18 @@ const { data } = Astro.props;
     <div class="contact-info">
       <h1>{data?.name}</h1>
       <h3>{data?.profession}</h3>
-      <Socials data={data?.social} />
+      <Socials data={data?.social} buttons={data?.buttons} />
     </div>
     <Menu data={data} />
   </section>
   <section class="info">
     {data?.about && <AboutSection data={data} />}
     {data?.experience?.length > 0 && <ExperienceSection data={data} />}
-    {data?.education?.length > 0 && <EducationSection data={data} />}
+    {
+      data?.education?.length > 0 && (
+        <EducationSection data={data} buttons={data?.buttons} />
+      )
+    }
     {data?.projects?.length > 0 && <ProjectsSection data={data} />}
   </section>
 </main>

@@ -20,8 +20,8 @@ const chips = [
 <section id="experience">
   <span class="section-title">{data?.menu.experience}</span>
   {
-    data.experience &&
-      data.experience.map(({ position, period, company, description }) => {
+    data?.experience &&
+      data?.experience.map(({ position, period, company, description }) => {
         return (
           <div class="experience">
             <div class="line" />
