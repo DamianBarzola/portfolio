@@ -26,7 +26,7 @@ const imageMap = {
               <img src={imageMap[project.imageKey[0]]} alt="" />
             </div> */}
             <div class="info">
-              <h4>{project.name}</h4>
+              <p class="title">{project.name}</p>
               <p>{project.description}</p>
               {project.technologies && <Chips data={project.technologies} />}
               <div class="buttons">
@@ -71,8 +71,11 @@ const imageMap = {
     gap: 2rem;
     padding-bottom: 0.5rem;
   }
-  h4 {
+  .title {
     font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
   }
   .card {
     background-color: var(--card);
@@ -102,6 +105,9 @@ const imageMap = {
   }
   .info p {
     color: var(--text-tertiary);
+  }
+  .info .title {
+    color: var(--text-primary);
   }
   .buttons {
     margin-top: 1rem;
@@ -137,10 +143,6 @@ const imageMap = {
     fill: var(--text-active);
   }
 
-  h4 {
-    margin: 0;
-    margin-bottom: 0.5rem;
-  }
   p {
     margin: 0;
     padding: 0.5rem 0 0 0;
