@@ -13,7 +13,7 @@ const { data } = Astro.props;
   <section class="home-data">
     <div class="contact-info">
       <h1>{data?.name}</h1>
-      <h3>{data?.profession}</h3>
+      <h2>{data?.profession}</h2>
       <Socials data={data?.social} buttons={data?.buttons} />
     </div>
     <Menu data={data} />
@@ -83,7 +83,7 @@ const { data } = Astro.props;
     margin: 0;
     font-weight: 800;
   }
-  h3 {
+  h2 {
     font-size: 1.3rem;
     margin: 1rem 0;
     color: var(--text-secondary);
