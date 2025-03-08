@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { CHIPS_TAGS } from "../consts.js";
 import js from "../assets/dev/js.svg";
 import react from "../assets/dev/react.svg";
@@ -29,103 +30,103 @@ import express from "../assets/dev/express.svg";
 const { data } = Astro.props;
 const chipData = {
   [CHIPS_TAGS.JAVASCRIPT]: {
-    image: js.src,
+    image: js,
     name: "JavaScript",
   },
   [CHIPS_TAGS.REACT]: {
-    image: react.src,
+    image: react,
     name: "React",
   },
   [CHIPS_TAGS.HTML]: {
-    image: html.src,
+    image: html,
     name: "HTML",
   },
   [CHIPS_TAGS.CSS]: {
-    image: css.src,
+    image: css,
     name: "CSS",
   },
   [CHIPS_TAGS.BOOTSTRAP]: {
-    image: bootstrap.src,
+    image: bootstrap,
     name: "Bootstrap",
   },
   [CHIPS_TAGS.VITEST]: {
-    image: vitest.src,
+    image: vitest,
     name: "Vitest",
   },
   [CHIPS_TAGS.CYPRESS]: {
-    image: cypress.src,
+    image: cypress,
     name: "Cypress",
   },
   [CHIPS_TAGS.PYTHON]: {
-    image: python.src,
+    image: python,
     name: "Python",
   },
   [CHIPS_TAGS.FLASK]: {
-    image: flask.src,
+    image: flask,
     name: "Flask",
   },
   [CHIPS_TAGS.POSTGRE]: {
-    image: postgre.src,
+    image: postgre,
     name: "PostgreSQL",
   },
   [CHIPS_TAGS.NODE]: {
-    image: node.src,
+    image: node,
     name: "Node.js",
   },
   [CHIPS_TAGS.ASTRO]: {
-    image: astro.src,
+    image: astro,
     name: "Astro",
   },
   [CHIPS_TAGS.C]: {
-    image: c.src,
+    image: c,
     name: "C",
   },
   [CHIPS_TAGS.JAVA]: {
-    image: java.src,
+    image: java,
     name: "Java",
   },
   [CHIPS_TAGS.JWT]: {
-    image: jwt.src,
+    image: jwt,
     name: "JWT",
   },
   [CHIPS_TAGS.MARIADB]: {
-    image: mariadb.src,
+    image: mariadb,
     name: "MariaDB",
   },
   [CHIPS_TAGS.MUI]: {
-    image: mui.src,
+    image: mui,
     name: "MUI",
   },
   [CHIPS_TAGS.MYSQL]: {
-    image: mysql.src,
+    image: mysql,
     name: "MySQL",
   },
   [CHIPS_TAGS.NEXT]: {
-    image: next.src,
+    image: next,
     name: "Next.js",
   },
   [CHIPS_TAGS.REACT_ROUTER]: {
-    image: reactRouter.src,
+    image: reactRouter,
     name: "React Router",
   },
   [CHIPS_TAGS.SPRING]: {
-    image: spring.src,
+    image: spring,
     name: "Spring",
   },
   [CHIPS_TAGS.TYPESCRIPT]: {
-    image: typescript.src,
+    image: typescript,
     name: "TypeScript",
   },
   [CHIPS_TAGS.TAILWIND]: {
-    image: tailwind.src,
+    image: tailwind,
     name: "Tailwind CSS",
   },
   [CHIPS_TAGS.REDUX]: {
-    image: redux.src,
+    image: redux,
     name: "Redux",
   },
   [CHIPS_TAGS.EXPRESS]: {
-    image: express.src,
+    image: express,
     name: "Express",
   },
 };
@@ -135,7 +136,7 @@ const chipData = {
   {
     data?.map((chip) => (
       <div class="chip">
-        <img src={chipData[chip]?.image} alt={chipData[chip]?.name} />
+        <Image src={chipData[chip]?.image} alt={chipData[chip]?.name} />
         <span>{chipData[chip]?.name}</span>
       </div>
     ))

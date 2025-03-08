@@ -70,25 +70,31 @@ console.log(metaDescription);
 
     --line: rgb(190, 190, 190);
   }
-
   html {
     min-height: 100dvh;
     background: var(--bg-gradient);
     position: relative;
   }
 
-  html,
   body {
+    box-sizing: border-box;
     margin: 0;
     width: 100%;
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
       Arial, sans-serif;
+    letter-spacing: 0.2px;
     color: var(--text-primary);
+    height: 100dvh;
+    padding: 4rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+
   body::after,
   body::before,
-  html::after,
-  html::before {
+  main::after,
+  main::before {
     content: "";
     display: block;
     background: var(--text-tertiary);
@@ -101,19 +107,19 @@ console.log(metaDescription);
     width: 2px;
     height: 100%;
   }
-  html::after,
-  html::before {
+  main::after,
+  main::before {
     height: 2px;
     width: 100%;
   }
 
-  html::after {
+  main::after {
     top: 1.5rem;
     left: 0;
   }
 
-  html::before {
-    bottom: 1rem;
+  main::before {
+    bottom: 1.5rem;
     left: 0;
   }
   body::before {
@@ -131,15 +137,12 @@ console.log(metaDescription);
     body::before {
       right: 0.4rem;
     }
-    html::after {
+    main::after {
       top: 0.4rem;
     }
-    html::before {
+    main::before {
       bottom: 0.4rem;
     }
-  }
-  body {
-    height: 100%;
   }
 
   section[id] {
@@ -200,8 +203,15 @@ console.log(metaDescription);
     }
   }
   @media screen and (max-width: 768px) {
+    body {
+      height: auto;
+      padding: 4px;
+    }
+    main {
+      display: block;
+    }
     section[id] {
-      min-height: 50dvh;
+      min-height: 60dvh;
       margin-top: 8dvh;
       padding-bottom: 8dvh;
       border-bottom: none;
