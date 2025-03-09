@@ -2,12 +2,25 @@
 const { lang, metaDescription, name } = Astro.props;
 
 const currentLang = lang || "es";
-console.log(metaDescription);
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
 <html lang={currentLang}>
   <head>
+    <!-- Google tag (gtag.js) -->
+   {GA_ID&& <script async src=`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+    ></script>}
+    { GA_ID && <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", GA_ID);
+    </script>}
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -22,10 +35,12 @@ console.log(metaDescription);
       hreflang="es"
       href="https://damianbarzola.vercel.app/es"
     />
-
     <title>{name} | Portfolio</title>
     <meta name="description" content={metaDescription} />
-  </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G124L09ES"
+    ></script></head
+  >
+
   <body>
     <slot />
   </body>
@@ -158,6 +173,7 @@ console.log(metaDescription);
   section[id]:last-of-type {
     margin-bottom: 0;
     padding-bottom: 0;
+    border-bottom: none;
   }
 
   .section-title {
@@ -194,6 +210,18 @@ console.log(metaDescription);
     background-color: #ffffff;
   }
 
+  /* selection color */
+  ::selection {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.3s;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -202,6 +230,15 @@ console.log(metaDescription);
       opacity: 1;
     }
   }
+
+  /* @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  } */
   @media screen and (max-width: 768px) {
     body {
       height: auto;
