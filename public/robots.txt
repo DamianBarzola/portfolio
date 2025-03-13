@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://damianbarzola.vercel.app/sitemap.xml

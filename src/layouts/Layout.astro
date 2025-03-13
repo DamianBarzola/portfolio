@@ -3,6 +3,8 @@ const { lang, metaDescription, name } = Astro.props;
 
 const currentLang = lang || "es";
 const GA_ID = import.meta.env.PUBLIC_GA_ID;
+const siteUrl = "https://damianbarzola.vercel.app";
+const pageTitle = `${name} | Portfolio`;
 ---
 
 <!doctype html>
@@ -25,20 +27,28 @@ const GA_ID = import.meta.env.PUBLIC_GA_ID;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="https://damianbarzola.vercel.app/en"
-    />
-    <link
-      rel="alternate"
-      hreflang="es"
-      href="https://damianbarzola.vercel.app/es"
-    />
-    <title>{name} | Portfolio</title>
-    <meta name="description" content={metaDescription} />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G124L09ES"
-    ></script></head
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/en`} />
+    <link rel="alternate" hreflang="es" href={`${siteUrl}/es`} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={metaDescription} />    
+    <meta name="keywords" content="portfolio, Damian Barzola, software development, data analysis, UI/UX design, frontend development" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Damian Barzola">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={`${siteUrl}/favicon.svg`} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={`${siteUrl}/favicon.svg`} />
+    
+    </head
   >
 
   <body>
