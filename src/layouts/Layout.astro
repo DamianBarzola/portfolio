@@ -56,7 +56,13 @@ const pageTitle = `${name} | Portfolio`;
   </body>
 </html>
 <script>
-  //
+  document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    document.addEventListener("mousemove", (event) => {
+          body.style.background = `radial-gradient(600px at ${event.clientX}px ${event.clientY}px,  rgb(43 71 151 / 18%), transparent 80%)`;
+        });
+
+  });
 </script>
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
@@ -72,7 +78,7 @@ const pageTitle = `${name} | Portfolio`;
     --text-tertiary: #b1b1b1;
     --text-active: var(--black);
 
-    --card: rgb(28 28 28 / 49%);
+    --card: rgb(28 28 28 / 40%);
     --chips: #1818189e;
 
     --bg-gradient: linear-gradient(
@@ -90,7 +96,7 @@ const pageTitle = `${name} | Portfolio`;
     --text-tertiary: #464646;
     --text-active: var(--white);
 
-    --card: rgb(255 255 255 / 50%);
+    --card: rgb(255 255 255 / 40%);
     --chips: #ffffff73;
     --bg-gradient: linear-gradient(to top, #e6f3ff 0%, #ace0f9a3 100%);
 
@@ -107,6 +113,7 @@ const pageTitle = `${name} | Portfolio`;
     margin: 0;
     width: 100%;
     font-family: "Poppins", "Inter", "Roboto", Arial, sans-serif;
+    font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--text-primary);
     height: 100dvh;
