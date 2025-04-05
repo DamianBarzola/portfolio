@@ -54,7 +54,6 @@ const { data } = Astro.props;
     });
   };
 </script>
-
 <style>
   #container {
     height: 78dvh;
@@ -63,6 +62,7 @@ const { data } = Astro.props;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    overflow: hidden;
   }
 
   section {
@@ -87,15 +87,15 @@ const { data } = Astro.props;
     color: var(--text-secondary);
   }
   .info {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-gutter: stable;
-    animation: fadeIn 1s ease-in-out;
     padding: 0 10px;
   }
   .home-data {
     margin-right: 1rem;
-    animation: fadeIn 1s ease-in-out;
   }
+
   @media screen and (max-width: 768px) {
     .home-data {
       margin: 0;
