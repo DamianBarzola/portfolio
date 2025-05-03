@@ -22,13 +22,9 @@ const imageMap = {
       data?.projects &&
         data?.projects.map((project) => (
           <div class="card">
-            <div class="carrousel">
-              {project.imageKey.map((data) => (
-                <div class={"image " + data.type}>
-                  <img src={imageMap[data.image]} alt="" />
-                </div>
-              ))}
-            </div>
+            {/* <div class="image">
+              <img src={imageMap[project.imageKey[0]]} alt="" />
+            </div> */}
             <div class="info">
               <p class="title">{project.name}</p>
               <p>{project.description}</p>
@@ -64,34 +60,6 @@ const imageMap = {
   </div>
 </section>
 <style>
-  .carrousel {
-    height: 200px;
-    margin: 0.5rem;
-    grid-column: span 3 / span 2;
-    display: flex;
-    gap: 0.5rem;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-  .image {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .image.logo img {
-    width: 120px;
-  }
-  .image.mobile img {
-    object-fit: contain;
-    width: 100px;
-  }
-  .image.browser img {
-    object-fit: contain;
-    width: 220px;
-  }
   .projects {
     display: flex;
     width: 100%;
@@ -116,7 +84,19 @@ const imageMap = {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-
+  .image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+  }
+  .image img {
+    max-height: 17rem;
+    max-width: 100%;
+    object-fit: contain;
+    flex: 1;
+  }
   .info {
     /* grid-column: span 2 / span 2; */
     grid-column: span 3 / span 2;

@@ -45,10 +45,9 @@
       ],
       "web": "https://costos-app.vercel.app/",
       "imageKey": [
-        "costosApp",
-        "costosApp1",
-        "costosApp2",
-        "costosApp3"
+        {"image":"costosApp","type":"logo"},
+        {"image":"costosApp","type":"browser"},
+        {"image":"costosApp","type":"mobile"}
       ],
       "repo": "https://github.com/DamianBarzola/costos-app"
     },
@@ -66,7 +65,9 @@
       ],
       "web": "",
       "imageKey": [
-        "cineApp"
+        {"image":"cineApp","type":"logo"},
+        {"image":"cineApp","type":"browser"},
+        {"image":"cineApp","type":"mobile"}
       ],
       "repo": "https://github.com/DamianBarzola/cineApp-frontend"
     },
@@ -84,7 +85,9 @@
       ],
       "web": "",
       "imageKey": [
-        "fleteros"
+        {"image":"fleteros","type":"logo"},
+        {"image":"fleteros","type":"browser"},
+        {"image":"fleteros","type":"mobile"}
       ],
       "repo": "https://github.com/DamianBarzola/fleteRos-frontend"
     },
@@ -97,7 +100,9 @@
       ],
       "web": "",
       "imageKey": [
-        "classlessCss"
+        {"image":"classlessCss","type":"logo"},
+        {"image":"classlessCss","type":"browser"},
+        {"image":"classlessCss","type":"mobile"}
       ],
       "repo": "https://github.com/DamianBarzola/db.css"
     }

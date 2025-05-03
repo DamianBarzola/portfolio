@@ -1,0 +1,102 @@
+---
+import { CHIPS_TAGS } from "../consts.js";
+import Chips from "./Chips.astro";
+
+const { data } = Astro.props;
+const chips = [
+  CHIPS_TAGS.REACT,
+  CHIPS_TAGS.JAVASCRIPT,
+  CHIPS_TAGS.HTML,
+  CHIPS_TAGS.CSS,
+  CHIPS_TAGS.BOOTSTRAP,
+  CHIPS_TAGS.VITEST,
+  CHIPS_TAGS.CYPRESS,
+  CHIPS_TAGS.PYTHON,
+  CHIPS_TAGS.FLASK,
+  CHIPS_TAGS.POSTGRE,
+];
+---
+
+<section id="experience">
+  <span class="section-title">{data?.menu.experience}</span>
+  {
+    data?.experience &&
+      data?.experience.map(({ position, period, company, description }) => {
+        return (
+          <div class="experience">
+            <div class="line" />
+            <div class="data">
+              <div class="header">
+                <p class="title">
+                  {position} - {company}
+                </p>
+                <p class="date">{period}</p>
+              </div>
+              <div class="description" set:html={description} />
+              <Chips data={chips} />
+            </div>
+          </div>
+        );
+      })
+  }
+</section>
+<style>
+  .data {
+    width: 94%;
+  }
+  .line {
+    position: relative;
+    width: 6%;
+    margin-bottom: 0.5rem;
+  }
+  .line::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-secondary);
+  }
+  .line::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 10px);
+    background-color: var(--text-secondary);
+    border-radius: 1px;
+  }
+  .experience {
+    display: flex;
+    width: 100%;
+  }
+  .date {
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+  .info {
+    width: 75%;
+    padding-left: 0.3rem;
+    font-size: 1.1rem;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.2rem;
+  }
+  .header {
+    margin-bottom: 1rem;
+  }
+  .description {
+    color: var(--text-secondary);
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+</style>
