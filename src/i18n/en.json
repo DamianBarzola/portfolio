@@ -89,7 +89,7 @@
       "repo": "https://github.com/DamianBarzola/fleteRos-frontend"
     },
     {
-      "name": "Classless CSS",
+      "name": "db.css",
       "description": "Classless CSS library. It allows applying styles to HTML elements without the need to use classes, simplifying development and improving code readability.",
       "technologies": [
         "css",

@@ -46,8 +46,9 @@
       "web": "https://costos-app.vercel.app/",
       "imageKey": [
         {"image":"costosApp","type":"logo"},
-        {"image":"costosApp","type":"browser"},
-        {"image":"costosApp","type":"mobile"}
+        {"image":"costosApp1","type":"mobile"},
+        {"image":"costosApp2","type":"mobile"},
+        {"image":"costosApp3","type":"mobile"}
       ],
       "repo": "https://github.com/DamianBarzola/costos-app"
     },
@@ -92,7 +93,7 @@
       "repo": "https://github.com/DamianBarzola/fleteRos-frontend"
     },
     {
-      "name": "Classless CSS",
+      "name": "db.css",
       "description": "Librería de estilos CSS sin clases. Permite aplicar estilos a los elementos HTML sin la necesidad de utilizar clases, simplificando el desarrollo y mejorando la legibilidad del código.",
       "technologies": [
         "css",
@@ -100,9 +101,9 @@
       ],
       "web": "",
       "imageKey": [
-        {"image":"classlessCss","type":"logo"},
-        {"image":"classlessCss","type":"browser"},
-        {"image":"classlessCss","type":"mobile"}
+        {"image":"dbcss","type":"logo"},
+        {"image":"dbcss1","type":"browser"},
+        {"image":"dbcss2","type":"browser"}
       ],
       "repo": "https://github.com/DamianBarzola/db.css"
     }
